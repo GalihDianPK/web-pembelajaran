@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">{{ .Section | title }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="list-grid">
+      {{ range .Pages }}
+      <a href="{{ .Permalink }}" class="list-card fade-in">
+        <div class="list-card-body">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description | default .Summary }}</p>
+          <div class="list-card-meta">
+            {{ with .Date }}<span>📅 {{ .Format "2 Jan 2006" }}</span>{{ end }}
+            <span>📖 {{ math.Round (div (countwords .Content) 200.0) }} menit baca</span>
+          </div>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
