@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">🏅 Sertifikasi LSP</span>
+    <h1>{{ .Title }}</h1>
+    <p class="description">Informasi lengkap mengenai program sertifikasi profesi di PSMURO.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    {{ .Content }}
+
+    {{ if .Pages }}
+    <div style="margin-top:2rem;">
+      {{ range .Pages }}
+      <div class="lsp-info-card fade-in">
+        <h3>{{ .Title }} {{ with .Params.level }}<span class="badge badge--blue">{{ . }}</span>{{ end }}</h3>
+        <div class="content-body">
+          {{ .Content }}
+        </div>
+        {{ with .Params.link }}
+        <a href="{{ . }}" class="btn btn-primary" style="margin-top:1rem;">Daftar Sekarang →</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

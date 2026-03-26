@@ -1,0 +1,86 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <span class="section-label">🔬 {{ .Site.Params.labFullName }}</span>
+        <h1>Selamat Datang di <span class="accent">PSMURO</span></h1>
+        <p class="tagline">{{ .Site.Params.tagline }}. Laboratorium {{ .Site.Params.labFullName }} {{ .Site.Params.university }} — tempat mahasiswa mengembangkan kreativitas di bidang multimedia, robotika, dan embedded system.</p>
+        <div class="hero-cta">
+          <a href="/workshop/" class="btn btn-primary">🎓 Lihat Workshop</a>
+          <a href="/lomba/" class="btn btn-secondary">🏆 ESC 2025</a>
+        </div>
+      </div>
+      <div class="hero-image fade-in delay-2">
+        <img src="{{ .Site.Params.logo }}" alt="Logo PSMURO">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Highlight Cards -->
+<section class="section" id="highlights">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Apa yang Kami Tawarkan</span>
+      <h2>Eksplorasi Program Kami</h2>
+      <p>Dari workshop hands-on hingga kompetisi nasional — PSMURO menyediakan wadah untuk berkembang.</p>
+    </div>
+
+    <div class="card-grid">
+      <a href="/workshop/" class="card card--green fade-in delay-1" style="text-decoration:none;color:inherit;">
+        <div class="card-icon">🛠️</div>
+        <h3>Workshop</h3>
+        <p>Pelatihan praktis mulai dari IoT, PCB Design, hingga pemrograman mikrokontroler. Belajar langsung dari praktisi.</p>
+        <span class="card-link">Lihat Workshop →</span>
+      </a>
+
+      <a href="/praktikum/" class="card card--purple fade-in delay-2" style="text-decoration:none;color:inherit;">
+        <div class="card-icon">📚</div>
+        <h3>Praktikum</h3>
+        <p>Panduan lengkap praktikum Bab 1-8 dengan SOP, briefing, dan materi yang terstruktur rapi.</p>
+        <span class="card-link">Baca Materi →</span>
+      </a>
+
+      <a href="/lsp/" class="card card--blue fade-in delay-3" style="text-decoration:none;color:inherit;">
+        <div class="card-icon">🏅</div>
+        <h3>Sertifikasi LSP</h3>
+        <p>Informasi lengkap sertifikasi profesi: syarat, jadwal, dan tingkat sasaran peserta.</p>
+        <span class="card-link">Info Sertifikasi →</span>
+      </a>
+
+      <a href="/lomba/" class="card card--cyan fade-in delay-4" style="text-decoration:none;color:inherit;">
+        <div class="card-icon">🏆</div>
+        <h3>ESC — Embedded System Competition</h3>
+        <p>Kompetisi embedded system tahunan. Tunjukkan inovasimu dan raih gelar juara!</p>
+        <span class="card-link">Lihat Lomba →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section" style="background: var(--bg-secondary);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-label">Tentang Lab</span>
+      <h2>{{ .Site.Params.labFullName }}</h2>
+      <p>Laboratorium di bawah naungan {{ .Site.Params.university }} yang berfokus pada pengembangan kompetensi mahasiswa dalam bidang multimedia, robotika, dan sistem tertanam (embedded system).</p>
+    </div>
+    <div class="card-grid" style="max-width:800px;margin:0 auto;">
+      <div class="card fade-in delay-1">
+        <div class="card-icon">👨‍🔬</div>
+        <h3>Tim Berpengalaman</h3>
+        <p>Didampingi asisten lab dan dosen berpengalaman di bidangnya masing-masing.</p>
+      </div>
+      <div class="card fade-in delay-2">
+        <div class="card-icon">⚡</div>
+        <h3>Fasilitas Lengkap</h3>
+        <p>Peralatan modern untuk praktikum, workshop, dan pengembangan proyek mahasiswa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

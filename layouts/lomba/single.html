@@ -1,0 +1,60 @@
+{{ define "main" }}
+<!-- ESC Page Header with Effects -->
+<div class="page-header" style="background: linear-gradient(135deg, #0B0E1A, #130E25, #0E1528); color: #E8EAF6; padding: 4rem 0; position: relative; overflow: hidden;">
+  <!-- Circuit board pattern -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(57,255,20,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(57,255,20,0.04) 1px, transparent 1px);background-size:40px 40px;"></div>
+  
+  <div class="container" style="position:relative;z-index:2;">
+    <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+      <img src="{{ .Site.Params.mascot }}" alt="Maskot ESC" style="width:120px;filter:drop-shadow(0 0 20px rgba(57,255,20,0.3));animation:float 3s ease-in-out infinite;">
+      <div>
+        <span class="section-label" style="background:rgba(57,255,20,0.15);border-color:rgba(57,255,20,0.3);">🏆 ESC 2025</span>
+        <h1 style="color:#E8EAF6;">{{ .Title }}</h1>
+        {{ with .Description }}<p class="description" style="color:#A0A8CF;">{{ . }}</p>{{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="content-body" style="max-width:900px;">
+      {{ .Content }}
+    </div>
+
+    <!-- Timeline if exists -->
+    {{ with .Params.timeline }}
+    <div style="max-width:700px;margin:3rem 0;">
+      <h2 style="margin-bottom:1.5rem;">📅 Timeline</h2>
+      <div class="esc-timeline">
+        {{ range . }}
+        <div class="timeline-item fade-in">
+          <div class="date">{{ .date }}</div>
+          <h4>{{ .title }}</h4>
+          <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Gallery if exists -->
+    {{ with .Params.gallery }}
+    <div style="margin:3rem 0;">
+      <h2 style="margin-bottom:1.5rem;">📸 Galeri Dokumentasi</h2>
+      <div class="gallery-grid">
+        {{ range . }}
+        <div class="gallery-item" onclick="openLightbox('{{ . }}')">
+          <img src="{{ . }}" alt="Dokumentasi ESC" loading="lazy">
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <div style="margin-top:2rem;">
+      <a href="/lomba/" class="btn btn-secondary">← Kembali ke ESC</a>
+    </div>
+  </div>
+</section>
+{{ end }}
