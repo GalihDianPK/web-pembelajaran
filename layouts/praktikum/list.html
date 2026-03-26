@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">📚 Praktikum</span>
+    <h1>{{ .Title }}</h1>
+    <p class="description">Panduan lengkap praktikum, SOP, dan materi Bab 1 hingga Bab 8.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="praktikum-layout">
+      <aside class="praktikum-sidebar">
+        <nav class="sidebar-nav">
+          <h4>📖 Daftar Materi</h4>
+          <ul>
+            {{ range .Pages.ByWeight }}
+            <li>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </nav>
+      </aside>
+      <div>
+        <div class="content-body">
+          {{ .Content }}
+        </div>
+        <div class="list-grid" style="margin-top:2rem;">
+          {{ range .Pages.ByWeight }}
+          <a href="{{ .Permalink }}" class="list-card fade-in">
+            <div class="list-card-body">
+              <h3>{{ .Title }}</h3>
+              <p>{{ .Description | default .Summary }}</p>
+            </div>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

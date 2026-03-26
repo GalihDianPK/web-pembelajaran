@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">🔬 PSMURO</span>
+        <p>{{ .Site.Params.labFullName }} — {{ .Site.Params.university }}. {{ .Site.Params.tagline }}</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navigasi</h4>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="mailto:{{ .Site.Params.social.email }}">📧 Email</a></li>
+          <li><a href="{{ .Site.Params.social.instagram }}" target="_blank" rel="noopener">📸 Instagram</a></li>
+          <li><a href="{{ .Site.Params.social.youtube }}" target="_blank" rel="noopener">🎬 YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ now.Year }} {{ .Site.Params.labFullName }} — {{ .Site.Params.university }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
