@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab 1 — Pengenalan Mikrokontroler — PSMURO — Pusat Studi Multimedia dan Robotika</title>
+<meta name="description" content="Memahami dasar-dasar mikrokontroler, arsitektur, dan penerapannya.">
+<meta name="author" content="PSMURO UG">
+
+
+<meta property="og:title" content="Bab 1 — Pengenalan Mikrokontroler">
+<meta property="og:description" content="Memahami dasar-dasar mikrokontroler, arsitektur, dan penerapannya.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/praktikum/bab-1/">
+
+
+<link rel="icon" href="/images/logo-psmuro.png" type="image/png">
+
+
+
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script>
+  
+  (function() {
+    const savedTheme = localStorage.getItem('psmuro-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body><header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="/images/logo-psmuro.png" alt="Logo PSMURO">
+      <span>PSMURO</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      
+      <li>
+        <a href="/" >
+          Beranda
+        </a>
+      </li>
+      
+      <li>
+        <a href="/workshop/" >
+          Workshop
+        </a>
+      </li>
+      
+      <li>
+        <a href="/praktikum/" >
+          Praktikum
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lsp/" >
+          LSP
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lomba/" >
+          ESC
+        </a>
+      </li>
+      
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+<main class="site-main">
+<div class="page-header">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <span class="section-label">📚 Praktikum</span>
+      <span style="color:var(--text-muted);font-size:0.9rem;">• Estimasi: 1 menit baca</span>
+    </div>
+    <h1>Bab 1 — Pengenalan Mikrokontroler</h1>
+    <p class="description">Memahami dasar-dasar mikrokontroler, arsitektur, dan penerapannya.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="praktikum-layout">
+      
+      <aside class="praktikum-sidebar">
+        <nav class="sidebar-nav">
+          <h4>📖 Navigasi Bab</h4>
+          <ul>
+            
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-1/" class="active">
+                Bab 1 — Pengenalan Mikrokontroler
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-2/" >
+                Bab 2 — Pemrograman Dasar Arduino
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-3/" >
+                Bab 3 — Sensor dan Aktuator
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-4/" >
+                Bab 4 — Komunikasi Serial
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-5/" >
+                Bab 5 — PWM dan Kontrol Motor
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-6/" >
+                Bab 6 — Konektivitas WiFi
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-7/" >
+                Bab 7 — Desain PCB
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-8/" >
+                Bab 8 — Proyek Akhir
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/briefing/" >
+                
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/sop/" >
+                
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        
+        <nav class="sidebar-nav" style="margin-top:1rem;">
+          <h4>📑 Sub Bab</h4>
+          <div class="toc-list">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tujuan-pembelajaran">Tujuan Pembelajaran</a></li>
+    <li><a href="#apa-itu-mikrokontroler">Apa Itu Mikrokontroler?</a></li>
+    <li><a href="#mikrokontroler-vs-mikroprosesor">Mikrokontroler vs Mikroprosesor</a></li>
+    <li><a href="#contoh-penerapan">Contoh Penerapan</a></li>
+    <li><a href="#latihan">Latihan</a></li>
+  </ul>
+</nav>
+          </div>
+        </nav>
+        
+      </aside>
+
+      
+      <div class="content-body">
+        <h2 id="tujuan-pembelajaran">Tujuan Pembelajaran</h2>
+<p>Setelah menyelesaikan bab ini, mahasiswa diharapkan mampu:</p>
+<ol>
+<li>Memahami pengertian dan fungsi mikrokontroler</li>
+<li>Mengenal arsitektur dasar mikrokontroler (CPU, memori, I/O)</li>
+<li>Membedakan mikrokontroler dengan mikroprosesor</li>
+<li>Menyebutkan contoh penerapan mikrokontroler dalam kehidupan sehari-hari</li>
+</ol>
+<h2 id="apa-itu-mikrokontroler">Apa Itu Mikrokontroler?</h2>
+<p>Mikrokontroler adalah sebuah <strong>komputer kecil</strong> (<em>microcomputer</em>) yang terintegrasi dalam satu chip IC. Di dalamnya terdapat:</p>
+<ul>
+<li><strong>CPU</strong> (Central Processing Unit) — otak pemrosesan</li>
+<li><strong>RAM</strong> (Random Access Memory) — penyimpanan sementara</li>
+<li><strong>Flash Memory</strong> — penyimpanan program</li>
+<li><strong>I/O Ports</strong> — pin untuk berinteraksi dengan dunia luar</li>
+<li><strong>Timer/Counter</strong> — untuk fungsi pewaktu</li>
+<li><strong>ADC/DAC</strong> — konversi sinyal analog-digital</li>
+</ul>
+<h2 id="mikrokontroler-vs-mikroprosesor">Mikrokontroler vs Mikroprosesor</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Aspek</th>
+          <th>Mikrokontroler</th>
+          <th>Mikroprosesor</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Memori</td>
+          <td>Terintegrasi</td>
+          <td>Eksternal</td>
+      </tr>
+      <tr>
+          <td>I/O</td>
+          <td>Terintegrasi</td>
+          <td>Memerlukan chip tambahan</td>
+      </tr>
+      <tr>
+          <td>Harga</td>
+          <td>Murah</td>
+          <td>Lebih mahal</td>
+      </tr>
+      <tr>
+          <td>Konsumsi daya</td>
+          <td>Rendah</td>
+          <td>Tinggi</td>
+      </tr>
+      <tr>
+          <td>Contoh</td>
+          <td>Arduino, ESP32, STM32</td>
+          <td>Intel i7, AMD Ryzen</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="contoh-penerapan">Contoh Penerapan</h2>
+<ul>
+<li><strong>Otomotif:</strong> Sistem ABS, airbag, engine control unit</li>
+<li><strong>IoT:</strong> Smart home, sensor monitoring</li>
+<li><strong>Robotika:</strong> Kontrol motor, navigasi</li>
+<li><strong>Medis:</strong> Alat monitoring detak jantung</li>
+</ul>
+<h2 id="latihan">Latihan</h2>
+<ol>
+<li>Sebutkan 3 perbedaan utama antara mikrokontroler dan mikroprosesor</li>
+<li>Berikan 5 contoh penerapan mikrokontroler di bidang robotika</li>
+<li>Gambarkan diagram blok sederhana arsitektur mikrokontroler</li>
+</ol>
+
+
+        
+        <div style="display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color);gap:1rem;flex-wrap:wrap;">
+          
+          <span></span>
+          
+          
+          <a href="http://localhost:1313/praktikum/bab-2/" class="btn btn-primary">Bab 2 — Pemrograman Dasar Arduino →</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">🔬 PSMURO</span>
+        <p>Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. Eksplorasi Teknologi, Ciptakan Inovasi</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navigasi</h4>
+        <ul>
+          
+          <li><a href="/">Beranda</a></li>
+          
+          <li><a href="/workshop/">Workshop</a></li>
+          
+          <li><a href="/praktikum/">Praktikum</a></li>
+          
+          <li><a href="/lsp/">LSP</a></li>
+          
+          <li><a href="/lomba/">ESC</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="mailto:psmuro@gunadarma.ac.id">📧 Email</a></li>
+          <li><a href="#" target="_blank" rel="noopener">📸 Instagram</a></li>
+          <li><a href="#" target="_blank" rel="noopener">🎬 YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="Lightbox Image" id="lightbox-img">
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>

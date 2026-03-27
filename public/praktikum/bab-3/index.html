@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab 3 — Sensor dan Aktuator — PSMURO — Pusat Studi Multimedia dan Robotika</title>
+<meta name="description" content="Pengenalan berbagai sensor dan aktuator yang umum digunakan dalam proyek embedded system.">
+<meta name="author" content="PSMURO UG">
+
+
+<meta property="og:title" content="Bab 3 — Sensor dan Aktuator">
+<meta property="og:description" content="Pengenalan berbagai sensor dan aktuator yang umum digunakan dalam proyek embedded system.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/praktikum/bab-3/">
+
+
+<link rel="icon" href="/images/logo-psmuro.png" type="image/png">
+
+
+
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script>
+  
+  (function() {
+    const savedTheme = localStorage.getItem('psmuro-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body><header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="/images/logo-psmuro.png" alt="Logo PSMURO">
+      <span>PSMURO</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      
+      <li>
+        <a href="/" >
+          Beranda
+        </a>
+      </li>
+      
+      <li>
+        <a href="/workshop/" >
+          Workshop
+        </a>
+      </li>
+      
+      <li>
+        <a href="/praktikum/" >
+          Praktikum
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lsp/" >
+          LSP
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lomba/" >
+          ESC
+        </a>
+      </li>
+      
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+<main class="site-main">
+<div class="page-header">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <span class="section-label">📚 Praktikum</span>
+      <span style="color:var(--text-muted);font-size:0.9rem;">• Estimasi: 1 menit baca</span>
+    </div>
+    <h1>Bab 3 — Sensor dan Aktuator</h1>
+    <p class="description">Pengenalan berbagai sensor dan aktuator yang umum digunakan dalam proyek embedded system.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="praktikum-layout">
+      
+      <aside class="praktikum-sidebar">
+        <nav class="sidebar-nav">
+          <h4>📖 Navigasi Bab</h4>
+          <ul>
+            
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-1/" >
+                Bab 1 — Pengenalan Mikrokontroler
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-2/" >
+                Bab 2 — Pemrograman Dasar Arduino
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-3/" class="active">
+                Bab 3 — Sensor dan Aktuator
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-4/" >
+                Bab 4 — Komunikasi Serial
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-5/" >
+                Bab 5 — PWM dan Kontrol Motor
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-6/" >
+                Bab 6 — Konektivitas WiFi
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-7/" >
+                Bab 7 — Desain PCB
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-8/" >
+                Bab 8 — Proyek Akhir
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/briefing/" >
+                
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/sop/" >
+                
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        
+        <nav class="sidebar-nav" style="margin-top:1rem;">
+          <h4>📑 Sub Bab</h4>
+          <div class="toc-list">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tujuan-pembelajaran">Tujuan Pembelajaran</a></li>
+    <li><a href="#jenis-jenis-sensor">Jenis-Jenis Sensor</a>
+      <ul>
+        <li><a href="#sensor-digital">Sensor Digital</a></li>
+        <li><a href="#sensor-analog">Sensor Analog</a></li>
+      </ul>
+    </li>
+    <li><a href="#aktuator">Aktuator</a></li>
+    <li><a href="#latihan">Latihan</a></li>
+  </ul>
+</nav>
+          </div>
+        </nav>
+        
+      </aside>
+
+      
+      <div class="content-body">
+        <h2 id="tujuan-pembelajaran">Tujuan Pembelajaran</h2>
+<ol>
+<li>Mengenal berbagai jenis sensor digital dan analog</li>
+<li>Memahami cara kerja aktuator</li>
+<li>Mampu menghubungkan sensor ke mikrokontroler</li>
+<li>Membaca data sensor dan menampilkannya</li>
+</ol>
+<h2 id="jenis-jenis-sensor">Jenis-Jenis Sensor</h2>
+<h3 id="sensor-digital">Sensor Digital</h3>
+<ul>
+<li><strong>DHT11/DHT22</strong> — Suhu dan kelembaban</li>
+<li><strong>HC-SR04</strong> — Jarak ultrasonik</li>
+<li><strong>PIR</strong> — Pendeteksi gerakan</li>
+</ul>
+<h3 id="sensor-analog">Sensor Analog</h3>
+<ul>
+<li><strong>LDR</strong> — Intensitas cahaya</li>
+<li><strong>Potensiometer</strong> — Posisi rotasi</li>
+<li><strong>MQ-2</strong> — Gas dan asap</li>
+</ul>
+<h2 id="aktuator">Aktuator</h2>
+<ul>
+<li><strong>Motor DC</strong> — Menggerakkan roda robot</li>
+<li><strong>Servo Motor</strong> — Gerakan sudut presisi (0-180°)</li>
+<li><strong>Relay</strong> — Mengendalikan perangkat bertegangan tinggi</li>
+<li><strong>Buzzer</strong> — Menghasilkan suara/notifikasi</li>
+</ul>
+<h2 id="latihan">Latihan</h2>
+<ol>
+<li>Hubungkan sensor DHT11 ke Arduino dan tampilkan suhu di Serial Monitor</li>
+<li>Buat rangkaian sensor ultrasonik dan tampilkan jarak dalam cm</li>
+<li>Kontrol servo motor menggunakan potensiometer</li>
+</ol>
+
+
+        
+        <div style="display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color);gap:1rem;flex-wrap:wrap;">
+          
+          <a href="http://localhost:1313/praktikum/bab-2/" class="btn btn-secondary">← Bab 2 — Pemrograman Dasar Arduino</a>
+          
+          
+          <a href="http://localhost:1313/praktikum/bab-4/" class="btn btn-primary">Bab 4 — Komunikasi Serial →</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">🔬 PSMURO</span>
+        <p>Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. Eksplorasi Teknologi, Ciptakan Inovasi</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navigasi</h4>
+        <ul>
+          
+          <li><a href="/">Beranda</a></li>
+          
+          <li><a href="/workshop/">Workshop</a></li>
+          
+          <li><a href="/praktikum/">Praktikum</a></li>
+          
+          <li><a href="/lsp/">LSP</a></li>
+          
+          <li><a href="/lomba/">ESC</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="mailto:psmuro@gunadarma.ac.id">📧 Email</a></li>
+          <li><a href="#" target="_blank" rel="noopener">📸 Instagram</a></li>
+          <li><a href="#" target="_blank" rel="noopener">🎬 YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="Lightbox Image" id="lightbox-img">
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
