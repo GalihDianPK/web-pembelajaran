@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bab 6 — Konektivitas WiFi — PSMURO — Pusat Studi Multimedia dan Robotika</title>
+<meta name="description" content="Menghubungkan mikrokontroler ESP32 ke jaringan WiFi dan mengirim data ke cloud.">
+<meta name="author" content="PSMURO UG">
+
+
+<meta property="og:title" content="Bab 6 — Konektivitas WiFi">
+<meta property="og:description" content="Menghubungkan mikrokontroler ESP32 ke jaringan WiFi dan mengirim data ke cloud.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/praktikum/bab-6/">
+
+
+<link rel="icon" href="/images/logo-psmuro.png" type="image/png">
+
+
+
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script>
+  
+  (function() {
+    const savedTheme = localStorage.getItem('psmuro-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body><header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="/images/logo-psmuro.png" alt="Logo PSMURO">
+      <span>PSMURO</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      
+      <li>
+        <a href="/" >
+          Beranda
+        </a>
+      </li>
+      
+      <li>
+        <a href="/workshop/" >
+          Workshop
+        </a>
+      </li>
+      
+      <li>
+        <a href="/praktikum/" >
+          Praktikum
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lsp/" >
+          LSP
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lomba/" >
+          ESC
+        </a>
+      </li>
+      
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+<main class="site-main">
+<div class="page-header">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <span class="section-label">📚 Praktikum</span>
+      <span style="color:var(--text-muted);font-size:0.9rem;">• Estimasi: 0 menit baca</span>
+    </div>
+    <h1>Bab 6 — Konektivitas WiFi</h1>
+    <p class="description">Menghubungkan mikrokontroler ESP32 ke jaringan WiFi dan mengirim data ke cloud.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="praktikum-layout">
+      
+      <aside class="praktikum-sidebar">
+        <nav class="sidebar-nav">
+          <h4>📖 Navigasi Bab</h4>
+          <ul>
+            
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-1/" >
+                Bab 1 — Pengenalan Mikrokontroler
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-2/" >
+                Bab 2 — Pemrograman Dasar Arduino
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-3/" >
+                Bab 3 — Sensor dan Aktuator
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-4/" >
+                Bab 4 — Komunikasi Serial
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-5/" >
+                Bab 5 — PWM dan Kontrol Motor
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-6/" class="active">
+                Bab 6 — Konektivitas WiFi
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-7/" >
+                Bab 7 — Desain PCB
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/bab-8/" >
+                Bab 8 — Proyek Akhir
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/briefing/" >
+                
+              </a>
+            </li>
+            
+            <li>
+              <a href="http://localhost:1313/praktikum/sop/" >
+                
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        
+        <nav class="sidebar-nav" style="margin-top:1rem;">
+          <h4>📑 Sub Bab</h4>
+          <div class="toc-list">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tujuan-pembelajaran">Tujuan Pembelajaran</a></li>
+    <li><a href="#menghubungkan-esp32-ke-wifi">Menghubungkan ESP32 ke WiFi</a></li>
+    <li><a href="#latihan">Latihan</a></li>
+  </ul>
+</nav>
+          </div>
+        </nav>
+        
+      </aside>
+
+      
+      <div class="content-body">
+        <h2 id="tujuan-pembelajaran">Tujuan Pembelajaran</h2>
+<ol>
+<li>Memahami arsitektur WiFi pada ESP32</li>
+<li>Menghubungkan ESP32 ke jaringan WiFi</li>
+<li>Membuat web server sederhana di ESP32</li>
+<li>Mengirim data sensor ke platform cloud</li>
+</ol>
+<h2 id="menghubungkan-esp32-ke-wifi">Menghubungkan ESP32 ke WiFi</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;WiFi.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> <span style="color:#8be9fd">char</span><span style="color:#ff79c6">*</span> ssid <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;NamaWiFi&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> <span style="color:#8be9fd">char</span><span style="color:#ff79c6">*</span> password <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;PasswordWiFi&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setup</span>() {
+</span></span><span style="display:flex;"><span>  Serial.<span style="color:#50fa7b">begin</span>(<span style="color:#bd93f9">115200</span>);
+</span></span><span style="display:flex;"><span>  WiFi.<span style="color:#50fa7b">begin</span>(ssid, password);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">while</span> (WiFi.<span style="color:#50fa7b">status</span>() <span style="color:#ff79c6">!=</span> WL_CONNECTED) {
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">delay</span>(<span style="color:#bd93f9">500</span>);
+</span></span><span style="display:flex;"><span>    Serial.<span style="color:#50fa7b">print</span>(<span style="color:#f1fa8c">&#34;.&#34;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Serial.<span style="color:#50fa7b">println</span>(<span style="color:#f1fa8c">&#34;Terhubung!&#34;</span>);
+</span></span><span style="display:flex;"><span>  Serial.<span style="color:#50fa7b">println</span>(WiFi.<span style="color:#50fa7b">localIP</span>());
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="latihan">Latihan</h2>
+<ol>
+<li>Hubungkan ESP32 ke WiFi dan tampilkan IP Address di Serial Monitor</li>
+<li>Buat web server yang menampilkan data sensor suhu</li>
+<li>Kirim data sensor ke platform ThingSpeak</li>
+</ol>
+
+
+        
+        <div style="display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color);gap:1rem;flex-wrap:wrap;">
+          
+          <a href="http://localhost:1313/praktikum/bab-5/" class="btn btn-secondary">← Bab 5 — PWM dan Kontrol Motor</a>
+          
+          
+          <a href="http://localhost:1313/praktikum/bab-7/" class="btn btn-primary">Bab 7 — Desain PCB →</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">🔬 PSMURO</span>
+        <p>Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. Eksplorasi Teknologi, Ciptakan Inovasi</p>
+      </div>
+      <div class="footer-section">
+        <h4>Navigasi</h4>
+        <ul>
+          
+          <li><a href="/">Beranda</a></li>
+          
+          <li><a href="/workshop/">Workshop</a></li>
+          
+          <li><a href="/praktikum/">Praktikum</a></li>
+          
+          <li><a href="/lsp/">LSP</a></li>
+          
+          <li><a href="/lomba/">ESC</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <ul>
+          <li><a href="mailto:psmuro@gunadarma.ac.id">📧 Email</a></li>
+          <li><a href="#" target="_blank" rel="noopener">📸 Instagram</a></li>
+          <li><a href="#" target="_blank" rel="noopener">🎬 YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="Lightbox Image" id="lightbox-img">
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
