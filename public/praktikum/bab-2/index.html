@@ -2,13 +2,13 @@
 <html lang="id" data-theme="dark">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bab 2 — Pemrograman Dasar Arduino — PSMURO — Pusat Studi Multimedia dan Robotika</title>
-<meta name="description" content="Belajar pemrograman dasar menggunakan Arduino IDE dan bahasa C/C&#43;&#43;.">
+<title>Bab 2: Input/Output Lanjutan dan Sensor Dasar — PSMURO — Pusat Studi Multimedia dan Robotika</title>
+<meta name="description" content="Meningkatkan interaktivitas sistem: Membaca masukan data (input) fisik menggunakan tombol dan sensor analog.">
 <meta name="author" content="PSMURO UG">
 
 
-<meta property="og:title" content="Bab 2 — Pemrograman Dasar Arduino">
-<meta property="og:description" content="Belajar pemrograman dasar menggunakan Arduino IDE dan bahasa C/C&#43;&#43;.">
+<meta property="og:title" content="Bab 2: Input/Output Lanjutan dan Sensor Dasar">
+<meta property="og:description" content="Meningkatkan interaktivitas sistem: Membaca masukan data (input) fisik menggunakan tombol dan sensor analog.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="http://localhost:1313/praktikum/bab-2/">
 
@@ -17,7 +17,7 @@
 
 
 
-<link rel="stylesheet" href="/css/main.min.css">
+<link rel="stylesheet" href="/css/main.min.2e3763cde6dc538a80351648d8c734b7841b4d279f1316a7bfa608b22c9cbf62.css" integrity="sha256-LjdjzebcU4qANRZI2Mc0t4QbTSefExanv6YIsiycv2I=" crossorigin="anonymous">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,8 @@
 <body><header class="site-header">
   <nav class="nav-container">
     <a href="/" class="nav-logo">
-      <img src="/images/logo-psmuro.png" alt="Logo PSMURO">
+      <img src="/images/logo-psmuro.png" class="logo-dark" alt="Logo PSMURO">
+      <img src="/images/logo-psmuro-terang.png" class="logo-light" alt="Logo PSMURO">
       <span>PSMURO</span>
     </a>
 
@@ -91,8 +92,8 @@
       <span class="section-label">📚 Praktikum</span>
       <span style="color:var(--text-muted);font-size:0.9rem;">• Estimasi: 1 menit baca</span>
     </div>
-    <h1>Bab 2 — Pemrograman Dasar Arduino</h1>
-    <p class="description">Belajar pemrograman dasar menggunakan Arduino IDE dan bahasa C/C&#43;&#43;.</p>
+    <h1>Bab 2: Input/Output Lanjutan dan Sensor Dasar</h1>
+    <p class="description">Meningkatkan interaktivitas sistem: Membaca masukan data (input) fisik menggunakan tombol dan sensor analog.</p>
   </div>
 </div>
 
@@ -102,69 +103,132 @@
       
       <aside class="praktikum-sidebar">
         <nav class="sidebar-nav">
-          <h4>📖 Navigasi Bab</h4>
+          <h4>⚖️ Aturan Praktikum</h4>
           <ul>
             
             
-            <li>
-              <a href="http://localhost:1313/praktikum/bab-1/" >
-                Bab 1 — Pengenalan Mikrokontroler
-              </a>
-            </li>
+              
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/bab-2/" class="active">
-                Bab 2 — Pemrograman Dasar Arduino
-              </a>
-            </li>
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/sop/" >
+                  Standar Operasional Prosedur (SOP)
+                </a>
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/bab-3/" >
-                Bab 3 — Sensor dan Aktuator
-              </a>
-            </li>
+              
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/bab-4/" >
-                Bab 4 — Komunikasi Serial
-              </a>
-            </li>
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/briefing/" >
+                  Briefing Praktikum
+                </a>
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/bab-5/" >
-                Bab 5 — PWM dan Kontrol Motor
-              </a>
-            </li>
+              
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/bab-6/" >
-                Bab 6 — Konektivitas WiFi
-              </a>
-            </li>
+              
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/bab-7/" >
-                Bab 7 — Desain PCB
-              </a>
-            </li>
+              
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/bab-8/" >
-                Bab 8 — Proyek Akhir
-              </a>
-            </li>
+              
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/briefing/" >
-                
-              </a>
-            </li>
+              
+              
             
-            <li>
-              <a href="http://localhost:1313/praktikum/sop/" >
-                
-              </a>
-            </li>
+              
+              
+            
+          </ul>
+
+          <h4 style="margin-top:1.5rem;">📖 Daftar Materi</h4>
+          <ul>
+            
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/bab-1/" >
+                  Bab 1: Pengenalan Mikrokontroler
+                </a>
+              </li>
+              
+            
+              
+              
+            
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/bab-2/" class="active">
+                  Bab 2: Input/Output Lanjutan dan Sensor Dasar
+                </a>
+              </li>
+              
+            
+              
+              
+            
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/bab-3/" >
+                  Bab 3 — Sensor dan Aktuator
+                </a>
+              </li>
+              
+            
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/bab-4/" >
+                  Bab 4 — Komunikasi Serial
+                </a>
+              </li>
+              
+            
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/bab-5/" >
+                  Bab 5 — PWM dan Kontrol Motor
+                </a>
+              </li>
+              
+            
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/bab-6/" >
+                  Bab 6 — Konektivitas WiFi
+                </a>
+              </li>
+              
+            
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/bab-7/" >
+                  Bab 7 — Desain PCB
+                </a>
+              </li>
+              
+            
+              
+              
+              <li>
+                <a href="http://localhost:1313/praktikum/bab-8/" >
+                  Bab 8 — Proyek Akhir
+                </a>
+              </li>
+              
             
           </ul>
         </nav>
@@ -174,14 +238,7 @@
         <nav class="sidebar-nav" style="margin-top:1rem;">
           <h4>📑 Sub Bab</h4>
           <div class="toc-list">
-            <nav id="TableOfContents">
-  <ul>
-    <li><a href="#tujuan-pembelajaran">Tujuan Pembelajaran</a></li>
-    <li><a href="#struktur-program-arduino">Struktur Program Arduino</a></li>
-    <li><a href="#penjelasan-fungsi-dasar">Penjelasan Fungsi Dasar</a></li>
-    <li><a href="#latihan">Latihan</a></li>
-  </ul>
-</nav>
+            <nav id="TableOfContents"></nav>
           </div>
         </nav>
         
@@ -189,77 +246,38 @@
 
       
       <div class="content-body">
-        <h2 id="tujuan-pembelajaran">Tujuan Pembelajaran</h2>
-<ol>
-<li>Mengenal lingkungan pengembangan Arduino IDE</li>
-<li>Memahami struktur program Arduino (<code>setup()</code> dan <code>loop()</code>)</li>
-<li>Mampu membuat program LED blinking</li>
-<li>Memahami konsep digital I/O</li>
-</ol>
-<h2 id="struktur-program-arduino">Struktur Program Arduino</h2>
-<p>Setiap program Arduino memiliki dua fungsi utama:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">void</span> <span style="color:#50fa7b">setup</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// Dijalankan sekali saat pertama kali
-</span></span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">pinMode</span>(LED_BUILTIN, OUTPUT);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd">void</span> <span style="color:#50fa7b">loop</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// Dijalankan berulang-ulang
-</span></span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">digitalWrite</span>(LED_BUILTIN, HIGH);
-</span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">delay</span>(<span style="color:#bd93f9">1000</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">digitalWrite</span>(LED_BUILTIN, LOW);
-</span></span><span style="display:flex;"><span>  <span style="color:#50fa7b">delay</span>(<span style="color:#bd93f9">1000</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="penjelasan-fungsi-dasar">Penjelasan Fungsi Dasar</h2>
-<table>
-  <thead>
-      <tr>
-          <th>Fungsi</th>
-          <th>Kegunaan</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>pinMode(pin, mode)</code></td>
-          <td>Mengatur pin sebagai INPUT atau OUTPUT</td>
-      </tr>
-      <tr>
-          <td><code>digitalWrite(pin, value)</code></td>
-          <td>Menulis nilai HIGH/LOW ke pin digital</td>
-      </tr>
-      <tr>
-          <td><code>digitalRead(pin)</code></td>
-          <td>Membaca nilai dari pin digital</td>
-      </tr>
-      <tr>
-          <td><code>delay(ms)</code></td>
-          <td>Menghentikan eksekusi selama ms milidetik</td>
-      </tr>
-      <tr>
-          <td><code>Serial.begin(baud)</code></td>
-          <td>Memulai komunikasi serial</td>
-      </tr>
-      <tr>
-          <td><code>Serial.println(data)</code></td>
-          <td>Mengirim data ke serial monitor</td>
-      </tr>
-  </tbody>
-</table>
-<h2 id="latihan">Latihan</h2>
-<ol>
-<li>Buat program LED blinking dengan interval 500ms</li>
-<li>Buat program yang membaca tombol dan menyalakan LED</li>
-<li>Gunakan <code>Serial.println()</code> untuk menampilkan pesan di Serial Monitor</li>
-</ol>
+        <p>Setelah berhasil mengontrol keluaran (output) dasar pada Bab 1, pada <strong>Bab 2</strong> ini kita akan membuat sistem menjadi lebih interaktif. Fokus utama praktikum kali ini adalah mempelajari bagaimana mikrokontroler &ldquo;merasakan&rdquo; dan merespons kondisi dari luar.</p>
+<p>Berikut adalah gambaran utama dari kegiatan praktikum yang akan Anda pelajari dan praktikkan:</p>
+<ul>
+<li>
+<p>🔘 <strong>Pembacaan Input Digital (Push Button)</strong>
+Anda akan merangkai sakelar tekan (<em>push button</em>) dan memprogram NodeMCU untuk membaca status logika digital (HIGH/LOW atau 1/0). Tahap ini penting untuk memahami bagaimana mikrokontroler menerima instruksi langsung dari intervensi manusia.</p>
+</li>
+<li>
+<p>🎛️ <strong>Implementasi Input Analog</strong>
+Berbeda dengan sinyal digital yang hanya memiliki dua kondisi (nyala/mati), di sini Anda akan bereksperimen dengan pin analog (A0) untuk membaca nilai rentang yang bervariasi (misalnya menggunakan potensiometer atau sensor cahaya/LDR). Anda akan memantau perubahan nilai ini secara <em>real-time</em> melalui <em>Serial Monitor</em>.</p>
+</li>
+<li>
+<p>⚙️ <strong>Pengenalan Sinyal PWM (Pulse Width Modulation)</strong>
+Anda akan mengaplikasikan konsep PWM untuk mengontrol perangkat keluaran secara lebih presisi. Alih-alih hanya menyalakan atau mematikan LED, Anda akan memprogram mikrokontroler untuk mengatur tingkat kecerahan LED secara bertahap (<em>fading</em>).</p>
+</li>
+<li>
+<p>🧠 <strong>Logika Percabangan (If-Else)</strong>
+Tahap integrasi logika. Anda akan menulis kode pemrograman bersyarat (<em>conditional statement</em>) agar mikrokontroler dapat mengambil keputusan secara mandiri. Contohnya: &ldquo;Jika tombol ditekan, maka LED menyala; jika tidak, LED mati.&rdquo;</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Tujuan Praktikum:</strong> Di akhir Bab 2, Anda diharapkan mampu merangkai dan mengintegrasikan komponen input digital maupun analog, serta menguasai penulisan logika percabangan agar perangkat keras mampu berinteraksi dan merespons kondisi sekitarnya dengan tepat.</p>
+</blockquote>
 
 
         
         <div style="display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color);gap:1rem;flex-wrap:wrap;">
           
-          <a href="http://localhost:1313/praktikum/bab-1/" class="btn btn-secondary">← Bab 1 — Pengenalan Mikrokontroler</a>
+          <a href="http://localhost:1313/praktikum/sop/" class="btn btn-secondary">← Standar Operasional Prosedur (SOP)</a>
           
           
-          <a href="http://localhost:1313/praktikum/bab-3/" class="btn btn-primary">Bab 3 — Sensor dan Aktuator →</a>
+          <a href="http://localhost:1313/praktikum/briefing/" class="btn btn-primary">Briefing Praktikum →</a>
           
         </div>
       </div>
@@ -273,6 +291,18 @@
       <div class="footer-brand">
         <span class="brand-name">🔬 PSMURO</span>
         <p>Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. Eksplorasi Teknologi, Ciptakan Inovasi</p>
+        
+        
+        <div style="margin-top: 1.5rem;">
+          <span style="font-size: 1.1rem; font-weight: bold; color: var(--text-primary); display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+            <span style="color: var(--accent);">📍</span> Universitas Gunadarma, Kampus D
+          </span>
+          <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            Jl. Margonda Raya 100, Pondok Cina<br>
+            Depok, Jawa Barat
+          </p>
+        </div>
+        
       </div>
       <div class="footer-section">
         <h4>Navigasi</h4>
@@ -293,9 +323,12 @@
       <div class="footer-section">
         <h4>Kontak</h4>
         <ul>
-          <li><a href="mailto:psmuro@gunadarma.ac.id">📧 Email</a></li>
-          <li><a href="#" target="_blank" rel="noopener">📸 Instagram</a></li>
-          <li><a href="#" target="_blank" rel="noopener">🎬 YouTube</a></li>
+          <li>
+            <a href="https://www.instagram.com/psmuro_/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @psmuro_
+            </a>
+          </li>
         </ul>
       </div>
     </div>

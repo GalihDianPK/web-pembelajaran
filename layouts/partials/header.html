@@ -1,7 +1,8 @@
 <header class="site-header">
   <nav class="nav-container">
     <a href="/" class="nav-logo">
-      <img src="{{ .Site.Params.logo }}" alt="Logo PSMURO">
+      <img src="{{ .Site.Params.logo }}" class="logo-dark" alt="Logo PSMURO">
+      <img src="{{ .Site.Params.logoLight | default .Site.Params.logo }}" class="logo-light" alt="Logo PSMURO">
       <span>PSMURO</span>
     </a>
 

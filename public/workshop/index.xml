@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workshop on PSMURO — Pusat Studi Multimedia dan Robotika</title>
+    <link>http://localhost:1313/workshop/</link>
+    <description>Recent content in Workshop on PSMURO — Pusat Studi Multimedia dan Robotika</description>
+    <generator>Hugo</generator>
+    <language>id</language>
+    <lastBuildDate>Sun, 20 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Workshop Raspberry PI Robot</title>
+      <link>http://localhost:1313/workshop/workshop-omnirobot/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workshop/workshop-omnirobot/</guid>
+      <description>&lt;p&gt;Halo, Praktikan! Siap untuk mulai merakit dan mengendalikan robotmu sendiri dari layar kaca? Workshop Raspberry Pi (Robot) dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (&lt;em&gt;hands-on&lt;/em&gt;) membuat &lt;em&gt;Mobile Robot&lt;/em&gt; 4WD yang dapat dikendalikan dan menyiarkan video secara langsung melalui &lt;em&gt;web&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;Tingkatkan kemampuan teknologimu! Mari pelajari cara membangun sistem kendali robot jarak jauh menggunakan Web Framework dan Video Streaming.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-apa-saja-aktivitas-di-workshop-ini&#34;&gt;🎯 Apa Saja Aktivitas di Workshop Ini?&lt;/h2&gt;&#xA;&lt;p&gt;Kita akan belajar membangun sistem kendali robot berbasis &lt;em&gt;web&lt;/em&gt; dari dasar hingga tahap integrasi kamera. Berikut rinciannya:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Workshop Agrotechnology</title>
+      <link>http://localhost:1313/workshop/workshop-agrotech-2026/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workshop/workshop-agrotech-2026/</guid>
+      <description>&lt;p&gt;Halo, Praktikan! Siap untuk mulai membangun teknologi cerdas di bidang pertanian? Workshop dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (&lt;em&gt;hands-on&lt;/em&gt;) mengintegrasikan perangkat keras, sensor, dan internet.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;Mari kembangkan inovasi teknologi bersama! Bangun sistem pertanian cerdasmu dari nol hingga terkoneksi ke Cloud.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-apa-saja-aktivitas-di-workshop-ini&#34;&gt;🎯 Apa Saja Aktivitas di Workshop Ini?&lt;/h2&gt;&#xA;&lt;p&gt;Kita akan belajar membangun sistem IoT dari dasar hingga tahap visualisasi data. Berikut rinciannya:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Aktivitas&lt;/th&gt;&#xA;          &lt;th style=&#34;text-align: left&#34;&gt;Detail Pembelajaran&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;🔌 &lt;strong&gt;Pengenalan Hardware&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Memahami mikrokontroler &lt;strong&gt;WeMos ESP32&lt;/strong&gt; dan cara kerja pin GPIO.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;🌱 &lt;strong&gt;Sensor Agroteknologi&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Mengambil data lingkungan menggunakan &lt;strong&gt;Sensor Kelembapan Tanah&lt;/strong&gt; dan &lt;strong&gt;DHT21&lt;/strong&gt; (Suhu &amp;amp; Kelembapan).&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;⚙️ &lt;strong&gt;Kontrol Perangkat&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Menampilkan data di &lt;strong&gt;LCD 2004&lt;/strong&gt; dan mengontrol aktuator (seperti pompa) dengan modul &lt;strong&gt;Relay 4 Channel&lt;/strong&gt;.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;☁️ &lt;strong&gt;Integrasi Cloud IoT&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Mengumpulkan dan memvisualisasikan data sensor ke platform &lt;strong&gt;ThingSpeak&lt;/strong&gt;.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;💻 &lt;strong&gt;Pemrograman&lt;/strong&gt;&lt;/td&gt;&#xA;          &lt;td style=&#34;text-align: left&#34;&gt;Menulis dan mengunggah &lt;em&gt;code&lt;/em&gt; menggunakan perangkat lunak &lt;strong&gt;Arduino IDE&lt;/strong&gt;.&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-ketentuan--pelaksanaan&#34;&gt;📌 Ketentuan &amp;amp; Pelaksanaan&lt;/h2&gt;&#xA;&lt;p&gt;Pastikan kamu memperhatikan syarat dan lokasi pelaksanaannya:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Workshop Drone</title>
+      <link>http://localhost:1313/workshop/workshop-drone-2026/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workshop/workshop-drone-2026/</guid>
+      <description>&lt;p&gt;Halo, Praktikan! Tertarik untuk menerbangkan dan memprogram pesawat tanpa awak? Workshop Unmanned Aerial Vehicle (Drone) dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (&lt;em&gt;hands-on&lt;/em&gt;) mengendalikan drone DJI Tello, mulai dari menggunakan aplikasi hingga menulis &lt;em&gt;code&lt;/em&gt; untuk penerbangan otomatis.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;Tingkatkan kemampuan teknologimu! Mari pelajari cara mengendalikan dan memprogram drone cerdasmu sendiri untuk bermanuver di udara.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-apa-saja-aktivitas-di-workshop-ini&#34;&gt;🎯 Apa Saja Aktivitas di Workshop Ini?&lt;/h2&gt;&#xA;&lt;p&gt;Kita akan belajar mengoperasikan drone dari dasar hingga tahap pemrograman &lt;em&gt;flight control&lt;/em&gt;. Berikut rinciannya:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Workshop Healthcare</title>
+      <link>http://localhost:1313/workshop/workshop-healthcare-2026/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workshop/workshop-healthcare-2026/</guid>
+      <description>&lt;p&gt;Halo, Praktikan! Tertarik dengan inovasi teknologi di bidang medis? Workshop Mikrokontroler (Healthcare) dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (&lt;em&gt;hands-on&lt;/em&gt;) merakit alat pemantau kesehatan pintar yang terintegrasi dengan Internet of Things (IoT).&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;Tingkatkan kemampuan teknologimu! Mari pelajari cara membangun sistem Healthcare Monitoring untuk memantau suhu tubuh dan detak jantung secara real-time.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-apa-saja-aktivitas-di-workshop-ini&#34;&gt;🎯 Apa Saja Aktivitas di Workshop Ini?&lt;/h2&gt;&#xA;&lt;p&gt;Kita akan belajar membangun sistem IoT medis dari dasar hingga tahap visualisasi data ke &lt;em&gt;cloud&lt;/em&gt;. Berikut rinciannya:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Workshop OmniWheels</title>
+      <link>http://localhost:1313/workshop/workshop-omniwheels-2026/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workshop/workshop-omniwheels-2026/</guid>
+      <description>&lt;p&gt;Halo, Praktikan! Tertarik menggabungkan kecerdasan buatan dengan robotika? Workshop Raspberry Pi (Omniwheels) dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (&lt;em&gt;hands-on&lt;/em&gt;) merakit robot yang bisa bergerak ke segala arah dan mengenal wajah manusia!&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;Tingkatkan kemampuan teknologimu! Mari pelajari cara membangun robot cerdas berbasis Computer Vision dari nol hingga terkoneksi ke antarmuka Web.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-apa-saja-aktivitas-di-workshop-ini&#34;&gt;🎯 Apa Saja Aktivitas di Workshop Ini?&lt;/h2&gt;&#xA;&lt;p&gt;Kita akan belajar membangun sistem robotika cerdas mulai dari pengontrolan &lt;em&gt;hardware&lt;/em&gt; hingga implementasi &lt;em&gt;machine learning&lt;/em&gt; untuk pengenalan wajah. Berikut rinciannya:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Workshop Raspi Dasar</title>
+      <link>http://localhost:1313/workshop/workshop-raspidasar-2026/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workshop/workshop-raspidasar-2026/</guid>
+      <description>&lt;p&gt;Halo, Praktikan! Siap untuk mulai ngulik komputer mini yang sangat canggih? Workshop Raspberry Pi (Basic) dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (&lt;em&gt;hands-on&lt;/em&gt;) memahami &lt;em&gt;hardware&lt;/em&gt;, sistem operasi Linux, hingga eksekusi kode program.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;&amp;ldquo;Tingkatkan kemampuan teknologimu! Mari pelajari komputer mini yang bisa mengendalikan komponen elektronika hingga menjalankan sistem operasi utuh.&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-apa-saja-aktivitas-di-workshop-ini&#34;&gt;🎯 Apa Saja Aktivitas di Workshop Ini?&lt;/h2&gt;&#xA;&lt;p&gt;Kita akan belajar membangun sistem dari dasar hingga tahap pengontrolan perangkat keras. Berikut rinciannya:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

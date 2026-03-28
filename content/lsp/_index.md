@@ -1,63 +1,50 @@
 ---
-title: "Sertifikasi LSP"
-description: "Informasi program sertifikasi profesi melalui Lembaga Sertifikasi Profesi (LSP)"
+title: "Sertifikasi Profesi (LSP)"
+description: "Raih pengakuan profesional dan buktikan keahlianmu di bidang Embedded System. Tingkatkan daya saing kariermu dengan sertifikat kompetensi berstandar nasional (BNSP)."
+schemes:
+  - title: "Embedded System Technician"
+    level: "KKNI K5"
+    target: "Mahasiswa Semester 4+"
+    icon: "fas fa-microchip"
+    color: "green"
+    description: "Skema sertifikasi K5 dirancang untuk menguji kompetensi teknis praktis dalam perakitan, pengkabelan (*wiring*), dan pemrograman mikrokontroler standar. Pemegang sertifikat ini secara nasional diakui memiliki kualifikasi mumpuni sebagai Teknisi Embedded System madya."
+    competencies:
+      - "Menerapkan prosedur Keselamatan dan Kesehatan Kerja (K3)"
+      - "Membaca dan menerjemahkan skematik rangkaian elektronika"
+      - "Merangkai komponen I/O (Sensor & Aktuator) pada Breadboard/PCB"
+      - "Menulis dan mengunggah kode program dasar (C/C++)"
+      - "Melakukan pelacakan masalah (*troubleshooting*) perangkat keras"
+  
+  - title: "Embedded System Engineer"
+    level: "KKNI K6"
+    target: "Mahasiswa Semester 6+ / Alumni"
+    icon: "fas fa-network-wired"
+    color: "purple"
+    description: "Skema sertifikasi K6 merupakan tingkatan analis lanjutan yang menguji kemampuan perancangan arsitektur kompleks, integrasi Internet of Things (IoT), hingga optimasi firmware. Lulusan skema ini diakui memiliki kapasitas analisis setara Desainer/Insinyur."
+    competencies:
+      - "Merancang arsitektur topologi Embedded System & Sistem IoT"
+      - "Mengimplementasikan Real-Time Operating System (RTOS)"
+      - "Mengkonfigurasi protokol komunikasi jaringan (MQTT, HTTP, LoRa)"
+      - "Mendesain skematik alur Printed Circuit Board (PCB)"
+      - "Mengevaluasi efisiensi daya dan keamanan (*security*) mikrokontroler"
 ---
 
-## Tentang Program LSP
+## 🌟 Mengapa Sertifikasi Ini Penting?
 
-Pusat Studi Multimedia dan Robotika (PSMURO) bekerja sama dengan **Lembaga Sertifikasi Profesi (LSP)** untuk menyelenggarakan uji kompetensi bagi mahasiswa. Sertifikasi ini diakui secara nasional dan meningkatkan daya saing lulusan di dunia kerja.
+Sertifikasi profesi melalui **Lembaga Sertifikasi Profesi (LSP)** yang berlisensi **BNSP (Badan Nasional Sertifikasi Profesi)** adalah bukti otentik dan sah secara hukum bahwa Anda **kompeten** di bidang tersebut.
 
-## Mengapa Sertifikasi Penting?
-
-- ✅ **Diakui industri** — Sertifikat kompetensi bernilai lebih di mata perusahaan
-- ✅ **Standar nasional** — Mengacu pada Standar Kompetensi Kerja Nasional Indonesia (SKKNI)
-- ✅ **Portofolio profesional** — Bukti kemampuan yang terverifikasi
-- ✅ **Keunggulan kompetitif** — Membedakan diri dari lulusan lain
-
-## Skema Sertifikasi yang Tersedia
-
-### 🟢 Junior Embedded System Developer
-
-| Detail | Informasi |
-|--------|-----------|
-| **Level** | Junior / Entry Level |
-| **Sasaran** | Mahasiswa semester 4+ |
-| **Durasi Ujian** | 4 jam |
-| **Biaya** | Rp 500.000 |
-| **Jadwal** | April & Oktober setiap tahun |
-
-**Kompetensi yang Diuji:**
-- Pemrograman mikrokontroler dasar
-- Penggunaan sensor dan aktuator
-- Komunikasi serial (UART, I2C, SPI)
-- Debugging hardware sederhana
-
----
-
-### 🟣 Intermediate IoT Developer
-
-| Detail | Informasi |
-|--------|-----------|
-| **Level** | Intermediate |
-| **Sasaran** | Mahasiswa semester 6+ atau alumni |
-| **Durasi Ujian** | 6 jam |
-| **Biaya** | Rp 750.000 |
-| **Jadwal** | Juni & Desember setiap tahun |
-
-**Kompetensi yang Diuji:**
-- Arsitektur sistem IoT
-- Protokol komunikasi (MQTT, HTTP, WebSocket)
-- Cloud platform integration
-- Keamanan sistem IoT dasar
+* ✅ **Validasi Industri:** Sertifikat BNSP diakui secara luas oleh perusahaan-perusahaan teknologi di Indonesia.
+* ✅ **Portofolio Terukur:** Tidak hanya sekadar teori, Anda dinilai berdasarkan demonstrasi keterampilan nyata (*hands-on*).
+* ✅ **Jalur Cepat Karier:** Lulusan bersertifikat memiliki nilai tawar (*bargaining power*) dan prioritas lebih tinggi saat proses rekrutmen.
+* ✅ **Standar SKKNI:** Kompetensi yang diuji selaras dengan Standar Kompetensi Kerja Nasional Indonesia (SKKNI).
 
 ---
 
-## Cara Mendaftar
+## 📋 Alur Pendaftaran
 
-1. Hubungi panitia LSP PSMURO melalui email atau Instagram
-2. Isi formulir pendaftaran online
-3. Lakukan pembayaran
-4. Ikuti pembekalan pra-uji (H-7)
-5. Ikuti uji kompetensi pada jadwal yang ditentukan
+1. **Konsultasi & Pendaftaran:** Menghubungi narahubung Asisten Lab atau Panitia LSP guna memverifikasi kelengkapan administrasi.
+2. **Pembekalan (Pra-Asesmen):** Mengikuti sesi penyegaran materi (H-7) bersama asesor untuk menyamakan persepsi standar ujian.
+3. **Uji Kompetensi:** Mengerjakan ujian tertulis, observasi praktik merangkai alat, serta sesi wawancara langsung dengan Asesor BNSP.
+4. **Penerbitan Sertifikat:** Jika dinyatakan **Kompeten (K)**, sertifikat Garuda Emas BNSP akan diterbitkan dalam waktu ± 1-2 bulan.
 
-> **Informasi lebih lanjut:** Hubungi kami di psmuro@gunadarma.ac.id
+> **Hubungi Kami:** Informasi jadwal pendaftaran gelombang terdekat dapat ditanyakan langsung ke ruang Laboratorium PSMURO.

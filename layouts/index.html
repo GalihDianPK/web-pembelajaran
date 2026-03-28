@@ -1,21 +1,32 @@
 {{ define "main" }}
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text fade-in">
-        <span class="section-label">🔬 {{ .Site.Params.labFullName }}</span>
-        <h1>Selamat Datang di <span class="accent">PSMURO</span></h1>
-        <p class="tagline">{{ .Site.Params.tagline }}. Laboratorium {{ .Site.Params.labFullName }} {{ .Site.Params.university }} — tempat mahasiswa mengembangkan kreativitas di bidang multimedia, robotika, dan embedded system.</p>
+<!-- Hero Slider Section -->
+<section class="hero-slider" id="hero-slider">
+  <!-- Dynamic Slides -->
+  {{ range $index, $slide := .Params.sliders }}
+  <div class="slide {{ if eq $index 0 }}active{{ end }}">
+    <img src="{{ .image }}" alt="{{ .label | plainify }}">
+    <div class="slide-overlay"></div>
+    <div class="hero-content slide-content container">
+      <div class="hero-text {{ if eq $index 0 }}fade-in{{ end }}">
+        <span class="section-label">{{ .label }}</span>
+        <h1>{{ .title | safeHTML }}</h1>
+        <div class="tagline" style="margin-bottom:2rem;">{{ .tagline | safeHTML }}</div>
         <div class="hero-cta">
-          <a href="/workshop/" class="btn btn-primary">🎓 Lihat Workshop</a>
-          <a href="/lomba/" class="btn btn-secondary">🏆 ESC 2025</a>
+          <a href="{{ .button_link }}" class="btn btn-primary">{{ .button_text }}</a>
         </div>
       </div>
-      <div class="hero-image fade-in delay-2">
-        <img src="{{ .Site.Params.logo }}" alt="Logo PSMURO">
-      </div>
     </div>
+  </div>
+  {{ end }}
+
+  <!-- Slider Controls -->
+  <button class="slider-btn prev-btn" aria-label="Previous slide">❮</button>
+  <button class="slider-btn next-btn" aria-label="Next slide">❯</button>
+  
+  <div class="slider-dots">
+    {{ range $index, $slide := .Params.sliders }}
+    <span class="dot {{ if eq $index 0 }}active{{ end }}" data-index="{{ $index }}"></span>
+    {{ end }}
   </div>
 </section>
 

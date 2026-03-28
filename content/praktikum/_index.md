@@ -5,21 +5,16 @@ description: "Panduan lengkap praktikum, SOP, briefing, dan materi Bab 1 hingga 
 
 Selamat datang di halaman panduan praktikum PSMURO. Di sini kamu akan menemukan semua materi yang diperlukan untuk menjalani praktikum di laboratorium kami.
 
-## Standar Operasional Prosedur (SOP)
+---
 
-Sebelum memulai praktikum, pastikan kamu sudah memahami aturan berikut:
+## 📥 Download Modul & Aplikasi
+Berikut adalah tautan Google Drive untuk mengunduh Modul Praktikum lengkap dan aplikasi *software* yang dibutuhkan selama praktikum berlangsung. Bab-bab yang ada di menu navigasi adalah rangkuman esensial (highlight) dari isi modul aslinya.
 
-1. **Hadir tepat waktu** — toleransi keterlambatan maksimal 15 menit
-2. **Membawa modul praktikum** — bisa diakses melalui halaman materi di bawah
-3. **Memakai jas lab** saat berada di laboratorium
-4. **Mengikuti briefing** sebelum setiap sesi praktikum dimulai
-5. **Menjaga kebersihan** peralatan dan ruang lab setelah selesai
+<div style="display: flex; gap: 1rem; margin-top: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+  <a href="#" class="btn btn-primary">Download Modul</a>
+  <a href="#" class="btn btn-secondary">Download Aplikasi Praktikum</a>
+</div>
 
-## Briefing
+---
 
-Briefing dilakukan di awal setiap sesi untuk memastikan semua peserta memahami:
-- Tujuan praktikum pada sesi tersebut
-- Peralatan yang akan digunakan
-- Keselamatan kerja di laboratorium
-
-> Pilih bab di sidebar kiri (atau daftar di bawah) untuk mulai membaca materi.
+---

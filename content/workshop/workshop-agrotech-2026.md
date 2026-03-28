@@ -5,6 +5,7 @@ description: "Belajar dasar-dasar IoT mulai dari sensor, aktuator, hingga komuni
 location: "Lab PSMURO, Gedung 3 Lt. 4"
 status: "Pendaftaran Dibuka"
 image: "/images/workshop-agrotech-2026.png"
+gform: "https://cutt.ly/PendaftaranMIKON-AGROTEK"
 ---
 
 Halo, Praktikan! Siap untuk mulai membangun teknologi cerdas di bidang pertanian? Workshop dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (*hands-on*) mengintegrasikan perangkat keras, sensor, dan internet.

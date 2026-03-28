@@ -5,6 +5,7 @@ description: "Belajar dasar-dasar IoT mulai dari sensor, aktuator, hingga komuni
 location: "Lab PSMURO, Gedung 4 Lt. 2"
 status: "Pendaftaran Dibuka"
 image: "/images/workshop-healthcare-2026.png"
+gform: "https://cutt.ly/PendaftaranMIKON-KESEHATAN"
 ---
 
 Halo, Praktikan! Tertarik dengan inovasi teknologi di bidang medis? Workshop Mikrokontroler (Healthcare) dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (*hands-on*) merakit alat pemantau kesehatan pintar yang terintegrasi dengan Internet of Things (IoT).

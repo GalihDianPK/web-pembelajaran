@@ -5,6 +5,7 @@ description: "Belajar dasar-dasar IoT mulai dari sensor, aktuator, hingga komuni
 location: "Lab PSMURO, Gedung 4 Lt. 2"
 status: "Pendaftaran Dibuka"
 image: "/images/workshop-drone-2026.png"
+gform: "https://cutt.ly/PendaftaranDRONE"
 ---
 
 Halo, Praktikan! Tertarik untuk menerbangkan dan memprogram pesawat tanpa awak? Workshop Unmanned Aerial Vehicle (Drone) dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (*hands-on*) mengendalikan drone DJI Tello, mulai dari menggunakan aplikasi hingga menulis *code* untuk penerbangan otomatis.

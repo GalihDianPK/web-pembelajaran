@@ -1,0 +1,64 @@
+{{ define "main" }}
+<div class="page-header fade-in-fast">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <span class="section-label">📚 Praktikum</span>
+      <span style="color:var(--text-muted);font-size:0.9rem;">• Estimasi: {{ math.Round (div (countwords .Content) 200.0) }} menit baca</span>
+    </div>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
+  </div>
+</div>
+
+<section class="section fade-in-fast">
+  <div class="container">
+    <div class="praktikum-layout">
+      <!-- Sidebar with TOC from page headings -->
+      <aside class="praktikum-sidebar">
+        <nav class="sidebar-nav">
+          <h4>⚖️ Aturan Praktikum</h4>
+          <ul>
+            {{ $currentPage := . }}
+            {{ range .Parent.Pages.ByWeight }}
+              {{ $fileName := lower .File.LogicalName }}
+              {{ if in (slice "sop.md" "briefing.md") $fileName }}
+              <li>
+                <a href="{{ .Permalink }}" {{ if eq .Permalink $currentPage.Permalink }}class="active"{{ end }}>
+                  {{ .Title }}
+                </a>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </nav>
+
+        <!-- Sub-section TOC for current page -->
+        {{ if .TableOfContents }}
+        <nav class="sidebar-nav" style="margin-top:1rem;">
+          <h4>📑 Sub Bab</h4>
+          <div class="toc-list">
+            {{ .TableOfContents }}
+          </div>
+        </nav>
+        {{ end }}
+      </aside>
+
+      <!-- Content -->
+      <div class="content-body">
+        {{ .Content }}
+
+        <!-- Navigation between chapters -->
+        <div style="display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color);gap:1rem;flex-wrap:wrap;">
+          {{ with .NextInSection }}
+          <a href="{{ .Permalink }}" class="btn btn-secondary">← {{ .Title }}</a>
+          {{ else }}
+          <span></span>
+          {{ end }}
+          {{ with .PrevInSection }}
+          <a href="{{ .Permalink }}" class="btn btn-primary">{{ .Title }} →</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

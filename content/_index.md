@@ -1,4 +1,23 @@
 ---
 title: "Beranda"
 description: "Website resmi Pusat Studi Multimedia dan Robotika (PSMURO) Universitas Gunadarma"
+sliders:
+  - image: "/images/home-slide.jpg"
+    label: "🔬 Pusat Studi Multimedia dan Robotika"
+    title: "Selamat Datang di <span class='accent'>PSMURO</span>"
+    tagline: "Tempat mahasiswa mengembangkan kreativitas di bidang multimedia, robotika, dan embedded system melalui kolaborasi dan inovasi."
+    button_text: "Lihat Program"
+    button_link: "#highlights"
+  - image: "/images/foto-anggota-lab.jpg"
+    label: "👨‍🏫 PENGELOLA LAB"
+    title: "Prof. Dr. Nur Sultan Salahuddin, S.Kom, M.T."
+    tagline: "\"Kami berkomitmen membangun ekosistem riset yang presisi dan relevan dengan kebutuhan industri masa depan.\""
+    button_text: "Mulai Belajar"
+    button_link: "/praktikum/"
+  - image: "/images/foto-anggota-lab2.jpg"
+    label: "🕒 JADWAL OPERASIONAL"
+    title: "Laboratorium <span class='accent'>Terbuka</span>"
+    tagline: "<ul style='list-style:none;padding:0;'><li style='margin-bottom:0.5rem'><strong>Senin - Jumat:</strong> 08:00 WIB – 16:00 WIB</li><li><strong>Minggu & Libur Nasional:</strong> Tutup</li></ul>"
+    button_text: "Jadwal Workshop"
+    button_link: "/workshop/"
 ---

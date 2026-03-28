@@ -1,0 +1,70 @@
+baseURL = "https://psmuro.github.io/"
+languageCode = "id"
+title = "PSMURO — Pusat Studi Multimedia dan Robotika"
+theme = ""
+paginate = 10
+
+[params]
+  description = "Website resmi Pusat Studi Multimedia dan Robotika (PSMURO) Universitas Gunadarma"
+  author = "PSMURO UG"
+  logo = "/images/logo-psmuro.png"
+  logoLight = "/images/logo-psmuro-terang.png"
+  mascot = "/images/maskot-esc.png"
+  labFullName = "Pusat Studi Multimedia dan Robotika"
+  university = "Universitas Gunadarma"
+  tagline = "Eksplorasi Teknologi, Ciptakan Inovasi"
+
+[params.social]
+  instagram = "https://www.instagram.com/psmuro_/"
+  email = "psmuro@gunadarma.ac.id"
+
+[params.address]
+  name = "Universitas Gunadarma, Kampus D"
+  street = "Jl. Margonda Raya 100, Pondok Cina"
+  city = "Depok, Jawa Barat"
+
+[params.praktikum]
+  modulLink = "https://drive.google.com/drive/folders/1OENlJ67ecx08ErB7IXlI6AyLLlgF5fPz?hl=ID"
+  appLink = "https://drive.google.com/drive/folders/1udmxL1GKeuxR4QKkv2LiYz-Ng77yVtkd?hl=ID"
+
+[menu]
+  [[menu.main]]
+    identifier = "beranda"
+    name = "Beranda"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "workshop"
+    name = "Workshop"
+    url = "/workshop/"
+    weight = 2
+  [[menu.main]]
+    identifier = "praktikum"
+    name = "Praktikum"
+    url = "/praktikum/sop/"
+    weight = 3
+  [[menu.main]]
+    identifier = "lsp"
+    name = "LSP"
+    url = "/lsp/"
+    weight = 4
+  [[menu.main]]
+    identifier = "lomba"
+    name = "ESC"
+    url = "/lomba/"
+    weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[outputs]
+  home = ["HTML"]

@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">🛠️ Workshop</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="description">{{ . }}</p>{{ end }}
+    <div class="list-card-meta" style="margin-top:1rem;">
+      {{ with .Date }}<span>📅 {{ .Format "2 Jan 2006" }}</span>{{ end }}
+      {{ with .Params.location }}<span>📍 {{ . }}</span>{{ end }}
+      {{ with .Params.status }}<span class="badge badge--green">{{ . }}</span>{{ end }}
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="content-body">
+      {{ .Content }}
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="/workshop/" class="btn btn-secondary">← Kembali ke Daftar Workshop</a>
+    </div>
+  </div>
+</section>
+{{ end }}

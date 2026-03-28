@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workshop Agrotechnology — PSMURO — Pusat Studi Multimedia dan Robotika</title>
+<meta name="description" content="Belajar dasar-dasar IoT mulai dari sensor, aktuator, hingga komunikasi data menggunakan ESP32.">
+<meta name="author" content="PSMURO UG">
+
+
+<meta property="og:title" content="Workshop Agrotechnology">
+<meta property="og:description" content="Belajar dasar-dasar IoT mulai dari sensor, aktuator, hingga komunikasi data menggunakan ESP32.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:1313/workshop/workshop-agrotech-2026/">
+
+
+<link rel="icon" href="/images/logo-psmuro.png" type="image/png">
+
+
+
+<link rel="stylesheet" href="/css/main.min.cb128dafdce6ce4fe74ac002cf9d1ef762b80283d47c192b2224d4658a9ced62.css" integrity="sha256-yxKNr9zmzk/nSsACz50e92K4AoPUfBkrIiTUZYqc7WI=" crossorigin="anonymous">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script>
+  
+  (function() {
+    const savedTheme = localStorage.getItem('psmuro-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body><header class="site-header">
+  <nav class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="/images/logo-psmuro.png" class="logo-dark" alt="Logo PSMURO">
+      <img src="/images/logo-psmuro-terang.png" class="logo-light" alt="Logo PSMURO">
+      <span>PSMURO</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      
+      <li>
+        <a href="/" >
+          Beranda
+        </a>
+      </li>
+      
+      <li>
+        <a href="/workshop/" >
+          Workshop
+        </a>
+      </li>
+      
+      <li>
+        <a href="/praktikum/sop/" >
+          Praktikum
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lsp/" >
+          LSP
+        </a>
+      </li>
+      
+      <li>
+        <a href="/lomba/" >
+          ESC
+        </a>
+      </li>
+      
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+<main class="site-main">
+<div class="page-header">
+  <div class="container">
+    <span class="section-label">🛠️ Workshop</span>
+    <h1>Workshop Agrotechnology</h1>
+    <p class="description">Belajar dasar-dasar IoT mulai dari sensor, aktuator, hingga komunikasi data menggunakan ESP32.</p>
+    <div class="list-card-meta" style="margin-top:1rem;">
+      <span>📅 15 Mar 2025</span>
+      <span>📍 Lab PSMURO, Gedung 3 Lt. 4</span>
+      <span class="badge badge--green">Pendaftaran Dibuka</span>
+    </div>
+  </div>
+</div>
+
+<section class="page-content">
+  <div class="container">
+    <div class="content-body">
+      <p>Halo, Praktikan! Siap untuk mulai membangun teknologi cerdas di bidang pertanian? Workshop dari PSMURO ini dirancang khusus agar kamu bisa langsung praktik (<em>hands-on</em>) mengintegrasikan perangkat keras, sensor, dan internet.</p>
+<blockquote>
+<p><strong>&ldquo;Mari kembangkan inovasi teknologi bersama! Bangun sistem pertanian cerdasmu dari nol hingga terkoneksi ke Cloud.&rdquo;</strong></p>
+</blockquote>
+<hr>
+<h2 id="-apa-saja-aktivitas-di-workshop-ini">🎯 Apa Saja Aktivitas di Workshop Ini?</h2>
+<p>Kita akan belajar membangun sistem IoT dari dasar hingga tahap visualisasi data. Berikut rinciannya:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Aktivitas</th>
+          <th style="text-align: left">Detail Pembelajaran</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">🔌 <strong>Pengenalan Hardware</strong></td>
+          <td style="text-align: left">Memahami mikrokontroler <strong>WeMos ESP32</strong> dan cara kerja pin GPIO.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">🌱 <strong>Sensor Agroteknologi</strong></td>
+          <td style="text-align: left">Mengambil data lingkungan menggunakan <strong>Sensor Kelembapan Tanah</strong> dan <strong>DHT21</strong> (Suhu &amp; Kelembapan).</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">⚙️ <strong>Kontrol Perangkat</strong></td>
+          <td style="text-align: left">Menampilkan data di <strong>LCD 2004</strong> dan mengontrol aktuator (seperti pompa) dengan modul <strong>Relay 4 Channel</strong>.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">☁️ <strong>Integrasi Cloud IoT</strong></td>
+          <td style="text-align: left">Mengumpulkan dan memvisualisasikan data sensor ke platform <strong>ThingSpeak</strong>.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">💻 <strong>Pemrograman</strong></td>
+          <td style="text-align: left">Menulis dan mengunggah <em>code</em> menggunakan perangkat lunak <strong>Arduino IDE</strong>.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-ketentuan--pelaksanaan">📌 Ketentuan &amp; Pelaksanaan</h2>
+<p>Pastikan kamu memperhatikan syarat dan lokasi pelaksanaannya:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Detail</th>
+          <th>Informasi</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Waktu</strong></td>
+          <td>09:00 — 16:00 WIB</td>
+      </tr>
+      <tr>
+          <td><strong>Lokasi</strong></td>
+          <td>Lab PSMURO, Gedung 3 Lt. 4</td>
+      </tr>
+      <tr>
+          <td><strong>Kuota</strong></td>
+          <td>20 peserta</td>
+      </tr>
+      <tr>
+          <td><strong>Biaya</strong></td>
+          <td>100k</td>
+      </tr>
+      <tr>
+          <td><strong>Target Peserta:</strong></td>
+          <td><strong>Mahasiswa Tingkat 1 dan Tingkat 2</strong></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-alur-prosedur-pendaftaran-kursusworkshop-ug-muro">📝 Alur Prosedur Pendaftaran KURSUS/WORKSHOP UG-MURO</h2>
+<div style="text-align: justify;">
+<p><em>Assalamualaikum wr.wb. Mengingat kembali bagi yang belum mengikuti workshop, segera daftar dengan alur di bawah ini:</em></p>
+<p><strong>1. Pengajuan Blanko</strong> Mengajukan blanko pembayaran Kursus/Workshop di tautan berikut: 🔗 <strong><a href="https://cutt.ly/Pengajuan-BLANKO_L">Form Pengajuan Blanko</a></strong> <em>(Pilih jenis Kursus/Workshop sesuai dengan semester yang telah dilalui)</em></p>
+<p><strong>2. Pengecekan Studentsite &amp; Pembayaran</strong> Setelah pengajuan, blanko akan di-upload ke <strong>Studentsite</strong> (paling cepat 1 minggu setelah pengajuan). Jika blanko sudah muncul, segera lakukan pembayaran. <em>(Masa berlaku 1 minggu sejak upload)</em></p>
+<p><strong>3. Pendaftaran Kursus/Workshop</strong> Lakukan pendaftaran melalui tautan berikut sesuai dengan Kursus/Workshop yang tertera pada blanko:</p>
+</div>
+<ul>
+<li>🚁 <a href="https://cutt.ly/PendaftaranDRONE">Pendaftaran Drone</a></li>
+<li>🍓 <a href="https://cutt.ly/PendaftaranRASPIDASAR">Pendaftaran Raspi Dasar</a></li>
+<li>🌱 <a href="https://cutt.ly/PendaftaranMIKON-AGROTEK">Pendaftaran Mikon Agrotek</a></li>
+<li>🩺 <a href="https://cutt.ly/PendaftaranMIKON-KESEHATAN">Pendaftaran Mikon Kesehatan</a></li>
+<li>🤖 <a href="https://cutt.ly/PendaftaranROBOT-RASPI">Pendaftaran Robot Raspi</a></li>
+<li>👁️ <a href="https://cutt.ly/PendaftaranRecognition_Robot">Pendaftaran Recognition Robot</a></li>
+</ul>
+<blockquote>
+<p><strong>Pemberitahuan:</strong> Setelah melakukan pendaftaran, mahasiswa akan dihubungi oleh koordinator Kursus/Workshop UG MURO ketika Kursus/Workshop akan dilaksanakan.</p>
+</blockquote>
+<p><em>Salam,</em>
+<strong>Koordinator Kursus/Workshop UG MURO - Admin</strong></p>
+
+    </div>
+    <div style="margin-top:2rem;">
+      <a href="/workshop/" class="btn btn-secondary">← Kembali ke Daftar Workshop</a>
+    </div>
+  </div>
+</section>
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">🔬 PSMURO</span>
+        <p>Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. Eksplorasi Teknologi, Ciptakan Inovasi</p>
+        
+        
+        <div style="margin-top: 1.5rem;">
+          <span style="font-size: 1.1rem; font-weight: bold; color: var(--text-primary); display: flex; align-items: center; gap: 8px; margin-bottom: 5px;">
+            <span style="color: var(--accent);">📍</span> Universitas Gunadarma, Kampus D
+          </span>
+          <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            Jl. Margonda Raya 100, Pondok Cina<br>
+            Depok, Jawa Barat
+          </p>
+        </div>
+        
+      </div>
+      <div class="footer-section">
+        <h4>Navigasi</h4>
+        <ul>
+          
+          <li><a href="/">Beranda</a></li>
+          
+          <li><a href="/workshop/">Workshop</a></li>
+          
+          <li><a href="/praktikum/sop/">Praktikum</a></li>
+          
+          <li><a href="/lsp/">LSP</a></li>
+          
+          <li><a href="/lomba/">ESC</a></li>
+          
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Kontak</h4>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/psmuro_/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 8px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              @psmuro_
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pusat Studi Multimedia dan Robotika — Universitas Gunadarma. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="Lightbox Image" id="lightbox-img">
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>

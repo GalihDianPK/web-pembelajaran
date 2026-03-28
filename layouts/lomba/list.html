@@ -12,10 +12,8 @@
   <div class="esc-hero-content">
     <h1 class="fade-in delay-1"><span class="neon">Embedded System</span><br>Competition 2025</h1>
     <p class="subtitle fade-in delay-2">Kompetisi embedded system tahunan oleh {{ .Site.Params.labFullName }} {{ .Site.Params.university }}. Tunjukkan inovasimu!</p>
-    <div class="fade-in delay-3" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      {{ range .Pages }}
-      <a href="{{ .Permalink }}" class="btn btn-primary">{{ .Title }}</a>
-      {{ end }}
+    <div class="fade-in delay-3" style="display:flex;justify-content:center;margin-top:2rem;">
+      <a href="{{ .Params.daftar_link | default "#" }}" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1.1rem; border-radius: 50px; font-weight: 800; text-transform: uppercase; box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);" {{ if .Params.daftar_link }}target="_blank" rel="noopener"{{ end }}>Daftar di Sini</a>
     </div>
   </div>
 </section>
@@ -27,21 +25,17 @@
       {{ .Content }}
     </div>
 
-    {{ if .Pages }}
-    <div class="list-grid" style="margin-top:3rem;">
-      {{ range .Pages }}
-      <a href="{{ .Permalink }}" class="list-card fade-in" style="text-decoration:none;color:inherit;">
-        <div class="list-card-body">
-          <h3>{{ .Title }}</h3>
-          <p>{{ .Description | default .Summary }}</p>
-          <div class="list-card-meta">
-            {{ with .Date }}<span>📅 {{ .Format "2 Jan 2006" }}</span>{{ end }}
-          </div>
+    <!-- Interactive Competition Categories -->
+    <div class="esc-categories fade-in">
+      {{ range .Params.categories }}
+      <div class="cat-card" style="background-image: url('{{ .image }}');">
+        <div class="cat-content">
+          <h3>{{ .name }}</h3>
+          <p>{{ .desc }}</p>
         </div>
-      </a>
+      </div>
       {{ end }}
     </div>
-    {{ end }}
   </div>
 </section>
 
@@ -65,5 +59,22 @@
       container.appendChild(particle);
     }
   })();
+
+  // 3D Parallax Mascot Effect
+  document.addEventListener('mousemove', function(e) {
+    const mascot = document.querySelector('.esc-mascot-bg img');
+    if (!mascot) return;
+    
+    // Calculate mouse position relative to center of screen
+    const x = (window.innerWidth / 2 - e.pageX) / 40;
+    const y = (window.innerHeight / 2 - e.pageY) / 40;
+    
+    // Apply transform (adding rotation for extra depth)
+    mascot.style.transform = `translateX(${x}px) translateY(${y}px) rotateY(${x/2}deg) rotateX(${-y/2}deg)`;
+  });
+
+  window.addEventListener('scroll', function() {
+    // Scroll parallax effect removed per request
+  });
 </script>
 {{ end }}

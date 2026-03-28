@@ -1,31 +1,98 @@
 {{ define "main" }}
-<div class="page-header">
-  <div class="container">
-    <span class="section-label">🏅 Sertifikasi LSP</span>
-    <h1>{{ .Title }}</h1>
-    <p class="description">Informasi lengkap mengenai program sertifikasi profesi di PSMURO.</p>
+<div class="page-header fade-in">
+  <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <span class="section-label" style="display: inline-block; margin-bottom: 1rem;"><i class="fas fa-medal"></i> Sertifikasi Profesi</span>
+    <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">{{ .Title }}</h1>
+    <p class="description" style="font-size: 1.15rem;">{{ .Description }}</p>
   </div>
 </div>
 
-<section class="section">
+<section class="section fade-in delay-1" style="padding-top: 4rem;">
   <div class="container">
-    {{ .Content }}
+    
+    <!-- Certification Schemes Grid -->
+    {{ with .Params.schemes }}
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+      {{ range . }}
+      <div class="lsp-card lsp-card--{{ .color }}" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--border-radius-xl); overflow: hidden; position: relative; display: flex; flex-direction: column; transition: transform var(--transition-base), box-shadow var(--transition-base);">
+        
+        <!-- Top accent line -->
+        <div class="card-accent" style="height: 4px; width: 100%; position: absolute; top: 0; left: 0;"></div>
+        
+        <div style="padding: 2.5rem; flex: 1; display: flex; flex-direction: column;">
+          
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+            <div class="cert-icon" style="width: 60px; height: 60px; border-radius: 16px; display: flex; justify-content: center; align-items: center; font-size: 1.75rem;">
+              <i class="{{ .icon }}"></i>
+            </div>
+            <span class="cert-level" style="padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.5px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">{{ .level }}</span>
+          </div>
 
-    {{ if .Pages }}
-    <div style="margin-top:2rem;">
-      {{ range .Pages }}
-      <div class="lsp-info-card fade-in">
-        <h3>{{ .Title }} {{ with .Params.level }}<span class="badge badge--blue">{{ . }}</span>{{ end }}</h3>
-        <div class="content-body">
-          {{ .Content }}
+          <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem; line-height: 1.3;">{{ .title }}</h2>
+          <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; font-weight: 500;">
+            <i class="fas fa-user-graduate"></i> {{ .target }}
+          </div>
+
+          <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem; flex: 1;">{{ .description }}</p>
+
+          <div class="competency-box" style="background: var(--bg-secondary); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem;">
+            <h4 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">Kompetensi yang Diuji</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              {{ range .competencies }}
+              <li style="display: flex; gap: 0.75rem; margin-bottom: 0.75rem; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.4;">
+                <i class="fas fa-check-circle" style="margin-top: 3px;"></i>
+                <span>{{ . }}</span>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+
+          <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 1rem; font-size: 1rem; border-radius: 12px; border: 2px solid; font-weight: 600; text-align: center; text-decoration: none; transition: all background 0.2s;">
+            Simulasikan Tes Sekarang →
+          </a>
         </div>
-        {{ with .Params.link }}
-        <a href="{{ . }}" class="btn btn-primary" style="margin-top:1rem;">Daftar Sekarang →</a>
-        {{ end }}
       </div>
       {{ end }}
     </div>
     {{ end }}
+
+    <!-- Bottom Content Information -->
+    <div class="content-body fade-in delay-2" style="max-width: 900px; margin: 0 auto; background: var(--bg-card); padding: 3rem; border-radius: var(--border-radius-xl); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+      {{ .Content }}
+    </div>
+
   </div>
 </section>
+
+<style>
+  .lsp-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Color Theme Variations */
+  .lsp-card--green .card-accent { background: var(--neon-green); box-shadow: 0 0 15px var(--neon-green); }
+  .lsp-card--green .cert-icon { background: rgba(57, 255, 20, 0.1); color: var(--neon-green-dim); border: 1px solid rgba(57, 255, 20, 0.2); }
+  .lsp-card--green .cert-level { background: var(--neon-green); color: #000; }
+  .lsp-card--green .competency-box i { color: var(--neon-green-dim); }
+  .lsp-card--green .btn-outline { border-color: rgba(57, 255, 20, 0.3); color: var(--neon-green-dim); }
+  .lsp-card--green .btn-outline:hover { background: rgba(57, 255, 20, 0.1); color: var(--neon-green-dim); border-color: var(--neon-green-dim); }
+
+  .lsp-card--purple .card-accent { background: var(--purple); box-shadow: 0 0 15px var(--purple); }
+  .lsp-card--purple .cert-icon { background: rgba(139, 92, 246, 0.1); color: var(--purple); border: 1px solid rgba(139, 92, 246, 0.2); }
+  .lsp-card--purple .cert-level { background: var(--purple); color: #fff; }
+  .lsp-card--purple .competency-box i { color: var(--purple); }
+  .lsp-card--purple .btn-outline { border-color: rgba(139, 92, 246, 0.3); color: var(--purple); }
+  .lsp-card--purple .btn-outline:hover { background: rgba(139, 92, 246, 0.1); color: var(--purple); border-color: var(--purple); }
+
+  [data-theme="dark"] .lsp-card--green .cert-icon { color: var(--neon-green); }
+  [data-theme="dark"] .lsp-card--green .competency-box i { color: var(--neon-green); }
+  [data-theme="dark"] .lsp-card--green .btn-outline { color: var(--neon-green); }
+  [data-theme="dark"] .lsp-card--green .btn-outline:hover { color: var(--neon-green); border-color: var(--neon-green); }
+  
+  /* Typography enhancements in content body */
+  .content-body h2 { color: var(--text-primary); margin-top: 0; }
+  .content-body ul li { margin-bottom: 0.75rem; }
+  .content-body blockquote { font-style: normal; font-weight: 500; font-size: 1.05rem; background: rgba(37, 99, 235, 0.05); border-left-color: var(--blue); padding: 1.25rem 1.5rem;}
+</style>
 {{ end }}

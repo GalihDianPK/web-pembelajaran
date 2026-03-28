@@ -1,0 +1,78 @@
+{{ define "main" }}
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<div class="netflix-page-wrapper fade-in">
+  
+  <!-- Hero Coverflow (Featured Workshops) -->
+  <section class="netflix-hero">
+    <div style="text-align: center; margin-bottom: -1rem;">
+      <h1 class="workshop-heading">WORKSHOP</h1>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 5px;">TOP PICKS FOR YOU</p>
+    </div>
+
+    <div class="swiper netflix-coverflow">
+      <div class="swiper-wrapper">
+        {{ range .Pages.ByDate.Reverse }}
+        <div class="swiper-slide netflix-slide">
+          <div class="nf-poster">
+            <!-- Specific posters based on title fallback -->
+            {{ $posterImage := "/images/netflix_poster_iot.png" }}
+            {{ if strings.Contains (lower .Title) "pcb" }}{{ $posterImage = "/images/netflix_poster_pcb.png" }}{{ end }}
+            {{ if strings.Contains (lower .Title) "drone" }}{{ $posterImage = "/images/netflix_poster_robotics.png" }}{{ end }}
+            {{ if strings.Contains (lower .Title) "omniwheels" }}{{ $posterImage = "/images/netflix_poster_robotics.png" }}{{ end }}
+            {{ if strings.Contains (lower .Title) "agrotech" }}{{ $posterImage = "/images/netflix_poster_iot.png" }}{{ end }}
+
+            <img src="{{ .Params.image | default $posterImage }}" alt="{{ .Title }}">
+                        <div class="nf-poster-info" style="pointer-events: none; z-index: 100;">
+                <h2 class="nf-title">{{ .Title }}</h2>
+                <p class="nf-desc">{{ .Description | default .Summary | truncate 80 }}</p>
+                <div class="nf-actions" style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 5px; pointer-events: auto;">
+                  <a href="{{ if .Params.gform }}{{ .Params.gform }}{{ else }}{{ .Permalink }}{{ end }}" class="btn btn-primary nf-btn-daftar" {{ if .Params.gform }}target="_blank" rel="noopener"{{ end }}>Daftar</a>
+                  <a href="{{ .Permalink }}" class="btn nf-btn-info">Info</a>
+                </div>
+              </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      <!-- Pagination / Navigation -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initialize Swiper Coverflow
+    var swiper = new Swiper(".netflix-coverflow", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      loop: false, /* Disabled infinite scrolling per user request */
+      preventClicks: false,
+      preventClicksPropagation: false,
+      coverflowEffect: {
+        rotate: 35,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      }
+    });
+  });
+</script>
+{{ end }}
