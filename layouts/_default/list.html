@@ -11,7 +11,7 @@
   <div class="container">
     <div class="list-grid">
       {{ range .Pages }}
-      <a href="{{ .Permalink }}" class="list-card fade-in">
+      <a href="{{ .RelPermalink }}" class="list-card fade-in">
         <div class="list-card-body">
           <h3>{{ .Title }}</h3>
           <p>{{ .Description | default .Summary }}</p>

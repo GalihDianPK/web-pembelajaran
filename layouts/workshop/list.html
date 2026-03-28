@@ -28,8 +28,8 @@
                 <h2 class="nf-title">{{ .Title }}</h2>
                 <p class="nf-desc">{{ .Description | default .Summary | truncate 80 }}</p>
                 <div class="nf-actions" style="display: flex; justify-content: center; align-items: center; gap: 12px; margin-top: 5px; pointer-events: auto;">
-                  <a href="{{ if .Params.gform }}{{ .Params.gform }}{{ else }}{{ .Permalink }}{{ end }}" class="btn btn-primary nf-btn-daftar" {{ if .Params.gform }}target="_blank" rel="noopener"{{ end }}>Daftar</a>
-                  <a href="{{ .Permalink }}" class="btn nf-btn-info">Info</a>
+                  <a href="{{ if .Params.gform }}{{ .Params.gform }}{{ else }}{{ .RelPermalink }}{{ end }}" class="btn btn-primary nf-btn-daftar" {{ if .Params.gform }}target="_blank" rel="noopener"{{ end }}>Daftar</a>
+                  <a href="{{ .RelPermalink }}" class="btn nf-btn-info">Info</a>
                 </div>
               </div>
           </div>

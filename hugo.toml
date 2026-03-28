@@ -1,4 +1,4 @@
-baseURL = "https://psmuro.github.io/"
+baseURL = "https://psmuro-ug.vercel.app/"
 languageCode = "id"
 title = "PSMURO — Pusat Studi Multimedia dan Robotika"
 theme = ""

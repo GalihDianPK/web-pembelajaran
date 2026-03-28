@@ -23,7 +23,7 @@
               {{ $fileName := lower .File.LogicalName }}
               {{ if in (slice "sop.md" "briefing.md") $fileName }}
               <li>
-                <a href="{{ .Permalink }}" {{ if eq .Permalink $currentPage.Permalink }}class="active"{{ end }}>
+                <a href="{{ .RelPermalink }}" {{ if eq .RelPermalink $currentPage.RelPermalink }}class="active"{{ end }}>
                   {{ .Title }}
                 </a>
               {{ end }}
@@ -49,12 +49,12 @@
         <!-- Navigation between chapters -->
         <div style="display:flex;justify-content:space-between;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border-color);gap:1rem;flex-wrap:wrap;">
           {{ with .NextInSection }}
-          <a href="{{ .Permalink }}" class="btn btn-secondary">← {{ .Title }}</a>
+          <a href="{{ .RelPermalink }}" class="btn btn-secondary">← {{ .Title }}</a>
           {{ else }}
           <span></span>
           {{ end }}
           {{ with .PrevInSection }}
-          <a href="{{ .Permalink }}" class="btn btn-primary">{{ .Title }} →</a>
+          <a href="{{ .RelPermalink }}" class="btn btn-primary">{{ .Title }} →</a>
           {{ end }}
         </div>
       </div>
