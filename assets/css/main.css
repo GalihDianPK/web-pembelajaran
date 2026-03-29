@@ -1631,6 +1631,81 @@ html[data-theme="light"] .nav-logo .logo-light {
   .esc-mascot {
     max-width: 200px;
   }
+
+  /* ESC Categories — Vertical Accordion on Mobile */
+  .esc-categories {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .cat-card {
+    flex: none !important;
+    height: 120px;
+    border-radius: 16px;
+    filter: brightness(0.85) grayscale(0%);
+    transition: height 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+  }
+
+  .cat-card.mobile-active {
+    height: 280px;
+    filter: brightness(1.1) grayscale(0%);
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.2);
+  }
+
+  .cat-content {
+    transform: translateY(0);
+    opacity: 1;
+    padding: 1.25rem;
+  }
+
+  .cat-content h3 {
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+
+  .cat-card.mobile-active .cat-content h3 {
+    color: var(--neon-green);
+  }
+
+  .cat-content p {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  }
+
+  .cat-card.mobile-active .cat-content p {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 0.5rem;
+  }
+
+  /* Disable desktop hover behavior on mobile */
+  .esc-categories:hover .cat-card:not(:hover) {
+    flex: none !important;
+    filter: brightness(0.85) grayscale(0%);
+  }
+
+  .cat-card:hover {
+    flex: none !important;
+    filter: brightness(0.85) grayscale(0%);
+    box-shadow: none;
+  }
+
+  .cat-card:hover .cat-content p {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+  }
+
+  .cat-card:hover .cat-content h3 {
+    color: white;
+  }
+
+  .cat-card:hover::before {
+    background: linear-gradient(to top, rgba(11,14,26,0.95) 0%, rgba(11,14,26,0.1) 60%, transparent 100%);
+  }
 }
 
 @media (max-width: 480px) {

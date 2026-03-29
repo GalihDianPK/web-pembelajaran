@@ -76,5 +76,22 @@
   window.addEventListener('scroll', function() {
     // Scroll parallax effect removed per request
   });
+
+  // Mobile tap-to-expand for ESC category cards
+  (function() {
+    if (window.innerWidth > 768) return;
+    const cards = document.querySelectorAll('.cat-card');
+    cards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        const isActive = this.classList.contains('mobile-active');
+        // Close all cards first
+        cards.forEach(function(c) { c.classList.remove('mobile-active'); });
+        // Toggle the tapped card
+        if (!isActive) {
+          this.classList.add('mobile-active');
+        }
+      });
+    });
+  })();
 </script>
 {{ end }}
